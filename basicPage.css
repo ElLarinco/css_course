@@ -1,0 +1,119 @@
+:root {
+    --transition: all .15s ease-in-out;
+    --primary: rgb(104, 132, 224);
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+html {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 1 auto;
+}
+.body-container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 75%;
+    animation: show .5s ease-in-out;
+}
+.header {
+    color: white;
+    background-color: var(--primary);
+    text-align: center;
+}
+.nav {
+    width: 100%;
+}
+.nav-list {
+    list-style: none;
+    padding: .5rem 1rem;
+}
+.nav-item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+.nav-item > a, a {
+    border-bottom: 1px solid var(--primary);
+    color: black;
+    text-decoration: none;
+}
+.clearfix {
+    clear: both;
+}
+.l-float {
+    float: left;
+}
+.r-float {
+    float: right;
+}
+footer {
+    border-top: 1px solid grey;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-container {
+    width: 75%;
+}
+.aside-container {
+    padding: 0 .5rem;
+    overflow-y: scroll;
+    width: 25%;
+    border: 1px solid red;
+    text-align: center;
+    height: 500px;
+}
+.text-center {
+    text-align: center;
+}
+.box {
+    border-radius: .5rem;
+    box-shadow: 0px 0px 12px grey inset;
+    background-color: gainsboro;
+    color: grey;
+    font-size: 2rem;
+    width: 45%;
+    height: 200px;
+    display: inline-block;
+    padding: 70px;
+    margin: 1rem;
+    text-align: center;
+    transition: filter .5s ease-in-out, color .25s ease-in;
+    cursor: pointer;
+}
+.fixed-image {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    bottom: 0;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 12px grey;
+}
+.box:hover {
+    color: white;
+    background-color: grey;
+}
+@media screen and (max-width: 540px) {
+    .body-container {
+        padding: 0 1rem;
+        width: initial;
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

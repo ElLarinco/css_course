@@ -1,0 +1,130 @@
+:root {
+    --transition: all .15s ease-in-out;
+    --primary: rgb(104, 132, 224);
+}
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    box-sizing: border-box;
+}
+html {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header, footer {
+    text-align: center;
+}
+main {
+    width: 75%;
+    padding-top: 100px;
+    margin: 0 auto;
+    flex: 1 1 auto;
+}
+.underline-effect {
+    display: inline-block;
+}
+.underline-effect::after {
+    content: " ";
+    display: block;
+    width: 0%;
+    height: 5px;
+    background-color: var(--primary);
+    transition: var(--transition);
+    margin: 0 auto;
+    border-radius: 1rem;
+    margin-top: .1rem;
+}
+.underline-effect:hover::after {
+    width: 100%;
+}
+.l-float {
+    float: left;
+}
+.r-float {
+    float: right;
+}
+.img-card {
+    padding-top: 1rem;
+    padding-right: .5rem;
+    width: 200px;
+}
+p {
+    word-spacing: .25em;
+}
+.position-box {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: gainsboro;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.red-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.blue-box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    top: calc(100% - 50px);;
+    left: calc(100% - 50px);
+}
+.green-box {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    top: calc(100% - 50px);
+}
+.yellow-box {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    left: calc(100% - 50px);
+}
+.fixed {
+    position: fixed;
+}
+.sticky {
+    text-align: center;
+    padding: .25rem 0;
+    color: white;
+    background-color: grey;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    position: sticky;
+    top: 0;
+    left: auto;
+}
+.box {
+    margin: 0 auto;
+    width: 200px;
+    height: 800px;
+    background-color: gainsboro;
+}
+header {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, .95));
+    width: 100%;
+    height: 100px;
+}
+h1 > a {
+    color: initial;
+    text-decoration: none;
+}
+@media screen and (max-width: 540px) {
+    main {
+        padding: 0 1rem;
+        width: initial;
+    }
+}
